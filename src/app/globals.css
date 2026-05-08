@@ -1,0 +1,153 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+}
+
+:root {
+  /* Calm Wellness Palette */
+
+  --background: oklch(0.98 0.01 120);
+  --foreground: oklch(0.25 0.02 240);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.25 0.02 240);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.02 240);
+
+  /* Soft Sage Green */
+  --primary: oklch(0.62 0.08 165);
+  --primary-foreground: oklch(0.99 0 0);
+
+  /* Light muted secondary */
+  --secondary: oklch(0.95 0.01 180);
+  --secondary-foreground: oklch(0.32 0.02 240);
+
+  /* Calm muted surfaces */
+  --muted: oklch(0.96 0.01 180);
+  --muted-foreground: oklch(0.5 0.02 240);
+
+  /* Soft accent */
+  --accent: oklch(0.93 0.02 170);
+  --accent-foreground: oklch(0.3 0.02 240);
+
+  --destructive: oklch(0.62 0.2 25);
+
+  --border: oklch(0.9 0.01 180);
+  --input: oklch(0.9 0.01 180);
+  --ring: oklch(0.72 0.06 165);
+
+  --radius: 1rem;
+}
+
+.dark {
+  --background: oklch(0.16 0.01 240);
+  --foreground: oklch(0.96 0.01 120);
+
+  --card: oklch(0.2 0.01 240);
+  --card-foreground: oklch(0.96 0.01 120);
+
+  --popover: oklch(0.2 0.01 240);
+  --popover-foreground: oklch(0.96 0.01 120);
+
+  --primary: oklch(0.7 0.08 165);
+  --primary-foreground: oklch(0.14 0.01 240);
+
+  --secondary: oklch(0.24 0.01 240);
+  --secondary-foreground: oklch(0.96 0.01 120);
+
+  --muted: oklch(0.24 0.01 240);
+  --muted-foreground: oklch(0.7 0.01 240);
+
+  --accent: oklch(0.28 0.02 165);
+  --accent-foreground: oklch(0.96 0.01 120);
+
+  --destructive: oklch(0.68 0.19 25);
+
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 10%);
+  --ring: oklch(0.7 0.08 165);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply scroll-smooth font-sans;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-foreground;
+  }
+}
+
+@layer utilities {
+  .container-padding {
+    @apply px-6 md:px-8 lg:px-12;
+  }
+
+  .section-spacing {
+    @apply py-24 md:py-32;
+  }
+
+  .soft-card {
+    @apply rounded-3xl border border-border/50 bg-white/80 shadow-sm backdrop-blur-sm;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
