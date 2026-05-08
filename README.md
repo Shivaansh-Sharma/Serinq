@@ -164,6 +164,23 @@ src/
 
 ---
 
+
+
+## 👨‍💻 Author
+
+**Shivaansh Sharma**  - Frontend and User Authentication 
+GitHub: https://github.com/Shivaansh-Sharma
+
+**Harman Singh**  - Backend   
+GitHub: https://github.com/bhangu1335
+
+**Mehul Kala**  - Security and Database   
+GitHub: https://github.com/mehulkala
+
+**Feroz Ahmad**  - Research & File Structure   
+GitHub: https://github.com/phroze846
+
+---
 ## License
 
 This project is for educational and portfolio purposes.
