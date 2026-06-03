@@ -166,7 +166,7 @@ src/
 
 
 
-## 👨‍💻 Author
+## 👨‍💻 Authors
 
 **Shivaansh Sharma**  - Frontend and User Authentication  
 GitHub: https://github.com/Shivaansh-Sharma
