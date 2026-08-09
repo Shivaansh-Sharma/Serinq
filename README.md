@@ -12,6 +12,7 @@ The platform combines mood tracking, journaling, breathing exercises, focus sess
 - Personalized dashboard experience
 - Dynamic greetings
 - Wellness recommendations
+- AI-powered weekly reflections
 - Weekly reflections
 - Wellness scoring system
 
@@ -39,8 +40,38 @@ The platform combines mood tracking, journaling, breathing exercises, focus sess
 ### Wellness Insights
 - Dynamic behavioral observations
 - Personalized recommendations
-- Reflection system
 - Wellness score calculation
+- AI-powered weekly reflections based on recent mood and journal activity
+- Mood pattern analysis across the last 7 days
+- Identification of positive developments, challenges, and meaningful changes
+- Personalized reflection questions
+
+### AI-Powered Weekly Reflection
+
+Sereniq uses a language model to generate personalized weekly reflections from the user's recent mood and journal entries.
+
+The reflection pipeline:
+
+1. Fetches the user's mood and journal entries from the database
+2. Filters the data to the most recent 7 days
+3. Sends the relevant wellness context to the AI model through LangChain
+4. Generates a structured reflection using a predefined schema
+5. Displays the reflection interactively in the dashboard
+
+The generated reflection includes:
+
+- Weekly summary
+- Mood pattern
+- Positive developments
+- Challenges
+- Meaningful changes
+- Personalized reflection questions
+
+The system also handles cases where the user has:
+- Only mood entries
+- Only journal entries
+- Both mood and journal entries
+- No entries during the selected period
 
 ### Authentication
 - Email/password authentication
@@ -70,6 +101,12 @@ The platform combines mood tracking, journaling, breathing exercises, focus sess
 - Prisma ORM
 - PostgreSQL (Neon)
 
+### AI / LLM
+- LangChain.js
+- Groq API
+- OpenAI GPT-OSS 120B
+- Zod structured output validation
+
 ### Authentication
 - Auth.js
 - Google OAuth
@@ -98,6 +135,8 @@ NEXTAUTH_URL=http://localhost:3000
 
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
+
+GROQ_API_KEY=
 ```
 
 ---
@@ -174,7 +213,7 @@ GitHub: https://github.com/Shivaansh-Sharma
 **Harman Singh**  - Backend   
 GitHub: https://github.com/bhangu1335
 
-**Mehul Kala**  - Security and Database   
+**Mehul Kala**  - AI Integration, Security and Database  
 GitHub: https://github.com/mehulkala
 
 **Feroz Ahmad**  - Research & File Structure   
