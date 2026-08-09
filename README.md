@@ -13,7 +13,6 @@ The platform combines mood tracking, journaling, breathing exercises, focus sess
 - Dynamic greetings
 - Wellness recommendations
 - AI-powered weekly reflections
-- Weekly reflections
 - Wellness scoring system
 
 ### Mood Tracking
