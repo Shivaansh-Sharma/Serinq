@@ -14,6 +14,7 @@ import { getRecommendations } from "@/lib/recommendations";
 import { getWeeklyReflection } from "@/lib/weekly-reflection";
 
 import { MoodHeatmap } from "@/components/dashboard/mood-heatmap";
+import { AIWeeklyReflection } from "@/components/dashboard/ai-weekly-reflection";
 
 function getGreeting() {
   const hour =
@@ -245,6 +246,7 @@ export default async function DashboardPage() {
           )}
         </div>
 
+
         <div className="mt-8 rounded-2xl bg-muted/40 p-5">
           <p className="text-sm text-muted-foreground">
             Total wellness activities this week:
@@ -255,6 +257,8 @@ export default async function DashboardPage() {
           </p>
         </div>
       </section>
+      
+      <AIWeeklyReflection/>
 
       {/* Mood Heatmap */}
       <MoodHeatmap />
