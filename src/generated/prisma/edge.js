@@ -195,7 +195,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "D:\\VS Code\\Sereniq\\sereniq\\src\\generated\\prisma",
+      "value": "C:\\Users\\lenovo\\OneDrive\\Documents\\coding Projects\\sereniq_ai\\Sereniq\\src\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -209,12 +209,11 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "D:\\VS Code\\Sereniq\\sereniq\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\lenovo\\OneDrive\\Documents\\coding Projects\\sereniq_ai\\Sereniq\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null,
-    "schemaEnvPath": "../../../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../../../prisma",
   "clientVersion": "6.6.0",
@@ -223,11 +222,12 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "postgresql://neondb_owner:npg_w7GkndmyD5NM@ep-holy-scene-aopp9dhx-pooler.c-2.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+        "value": null
       }
     }
   },
